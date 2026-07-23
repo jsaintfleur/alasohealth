@@ -1,10 +1,7 @@
-<svg width="640" height="220" viewBox="0 0 640 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Alaso">
-  <title>Alaso</title>
-  <g transform="translate(8 10)">
-    <path d="M34 166L102 34H133L202 166H166L151 136H83L68 166H34ZM96 109H138L117 66L96 109Z" fill="#171817"/>
-    <path d="M222 34H254V166H222V34Z" fill="#171817"/>
-    <path d="M319 69C349 69 371 90 371 119V166H342V153C335 163 323 169 307 169C282 169 264 154 264 132C264 110 282 96 311 96H340C336 84 326 78 311 78C299 78 288 82 278 90L267 68C282 58 299 53 319 53V69ZM314 145C329 145 340 137 340 124V119H315C301 119 294 124 294 132C294 140 302 145 314 145Z" fill="#171817"/>
-    <path d="M426 169C406 169 388 164 374 154L386 132C400 141 414 146 429 146C442 146 449 142 449 135C449 128 441 126 426 124C399 120 380 111 380 88C380 66 400 53 430 53C448 53 464 57 477 65L466 87C454 80 442 76 429 76C418 76 411 80 411 87C411 94 419 96 435 99C463 103 481 113 481 135C481 156 460 169 426 169Z" fill="#171817"/>
-    <path d="M542 169C508 169 484 145 484 111C484 77 508 53 542 53C577 53 601 77 601 111C601 145 577 169 542 169ZM542 141C558 141 569 129 569 111C569 93 558 81 542 81C527 81 516 93 516 111C516 129 527 141 542 141Z" fill="#171817"/>
-  </g>
+<svg width="640" height="218" viewBox="0 0 640 218" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Alaso Health">
+  <title>Alaso Health</title>
+  <text x="320" y="120" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="132" font-weight="800" letter-spacing="6" fill="#171817">ALASO</text>
+  <path d="M96 170 H206" stroke="#c22743" stroke-width="4"/>
+  <path d="M434 170 H544" stroke="#c22743" stroke-width="4"/>
+  <text x="320" y="184" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="40" font-weight="600" letter-spacing="22" fill="#c22743">HEALTH</text>
 </svg>

@@ -17,7 +17,7 @@ export const APP_URL = process.env.NEXT_PUBLIC_APP_URL ?? "https://alaso.vercel.
 export const BRAND_NAME = "Alaso Health";
 export const APP_NAME = "Alaso";
 export const COPYRIGHT = `© 2026 ${BRAND_NAME}`;
-export const TAGLINE = "Build strength at home. Track progress every day.";
+export const TAGLINE = "Move with purpose. Build your legacy.";
 export const SITE_DESCRIPTION =
   "Alaso Health builds calm, privacy-first wellness software. Alaso, our home fitness tracker, keeps your steps, workouts, and weight journey on your device.";
 

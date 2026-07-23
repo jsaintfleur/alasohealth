@@ -1,21 +1,21 @@
-<svg width="960" height="260" viewBox="0 0 960 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Alaso">
-  <title>Alaso</title>
-  <g transform="translate(20 30) scale(0.195)">
-    <rect width="1024" height="1024" rx="240" fill="#142d73"/>
-    <path d="M214 790C344 832 676 832 810 790" stroke="#1d6f4a" stroke-width="28" stroke-linecap="round" opacity="0.58" fill="none"/>
-    
-    <path d="M286 746C342 616 401 454 512 244" stroke="#ffffff" stroke-width="86" stroke-linecap="round" fill="none"/>
-    <path d="M738 746C682 616 623 454 512 244" stroke="#ffffff" stroke-width="86" stroke-linecap="round" fill="none"/>
-    <path d="M392 566C455 534 569 534 632 566" stroke="#ffffff" stroke-width="70" stroke-linecap="round" fill="none"/>
-  
-    <circle cx="512" cy="348" r="54" fill="#c22743"/>
-    <path d="M512 309L526 339L559 343L535 365L541 398L512 382L483 398L489 365L465 343L498 339Z" fill="#c8a85a" opacity="0.95"/>
+<svg width="960" height="280" viewBox="0 0 960 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Alaso Health">
+  <title>Alaso Health</title>
+  <g transform="translate(24 16) scale(0.242)">
+    <path d="M218 850 C380 918 644 918 806 850 C800 878 790 896 778 908 C624 958 400 958 246 908 C234 896 224 878 218 850 Z" fill="#1d6f4a"/>
+    <path d="M152 850 L298 850 L560 196 L462 140 Z" fill="#1e3fae"/>
+    <path d="M462 140 L560 196 L540 246 L442 190 Z" fill="#142d73"/>
+    <path d="M462 140 L560 196 L872 850 L726 850 Z" fill="#c22743"/>
+    <g stroke="#ffffff" stroke-linecap="round" fill="none">
+      <circle cx="500" cy="360" r="48" fill="#ffffff" stroke="none"/>
+      <path d="M500 438 L500 566" stroke-width="52"/>
+      <path d="M496 462 L398 374" stroke-width="38"/>
+      <path d="M504 462 L602 374" stroke-width="38"/>
+      <path d="M500 556 L436 688" stroke-width="42"/>
+      <path d="M500 556 L564 688" stroke-width="42"/>
+    </g>
   </g>
-  <g transform="translate(260 30)">
-    <path d="M34 166L102 34H133L202 166H166L151 136H83L68 166H34ZM96 109H138L117 66L96 109Z" fill="#171817"/>
-    <path d="M222 34H254V166H222V34Z" fill="#171817"/>
-    <path d="M319 69C349 69 371 90 371 119V166H342V153C335 163 323 169 307 169C282 169 264 154 264 132C264 110 282 96 311 96H340C336 84 326 78 311 78C299 78 288 82 278 90L267 68C282 58 299 53 319 53V69ZM314 145C329 145 340 137 340 124V119H315C301 119 294 124 294 132C294 140 302 145 314 145Z" fill="#171817"/>
-    <path d="M426 169C406 169 388 164 374 154L386 132C400 141 414 146 429 146C442 146 449 142 449 135C449 128 441 126 426 124C399 120 380 111 380 88C380 66 400 53 430 53C448 53 464 57 477 65L466 87C454 80 442 76 429 76C418 76 411 80 411 87C411 94 419 96 435 99C463 103 481 113 481 135C481 156 460 169 426 169Z" fill="#171817"/>
-    <path d="M542 169C508 169 484 145 484 111C484 77 508 53 542 53C577 53 601 77 601 111C601 145 577 169 542 169ZM542 141C558 141 569 129 569 111C569 93 558 81 542 81C527 81 516 93 516 111C516 129 527 141 542 141Z" fill="#171817"/>
+  <g transform="translate(280 30)">
+    <text x="0" y="120" font-family="Helvetica, Arial, sans-serif" font-size="128" font-weight="800" letter-spacing="4" fill="#171817">ALASO</text>
+    <text x="4" y="182" font-family="Helvetica, Arial, sans-serif" font-size="42" font-weight="600" letter-spacing="20" fill="#c22743">HEALTH</text>
   </g>
 </svg>

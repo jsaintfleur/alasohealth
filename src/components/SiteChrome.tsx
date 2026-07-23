@@ -11,9 +11,12 @@ export function SiteHeader() {
       <HaitiBand />
       <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-5">
         <Link href="/" className="flex items-center gap-2.5" aria-label={`${BRAND_NAME} home`}>
-          <Image src="/brand/alaso-mark.svg" alt="" width={30} height={30} />
-          <span className="text-lg font-bold tracking-tight">
-            {APP_NAME} <span className="font-normal text-muted">Health</span>
+          <Image src="/brand/alaso-mark-dark.svg" alt="" width={34} height={34} className="rounded-lg" />
+          <span className="flex flex-col leading-none" aria-hidden>
+            <span className="text-[17px] font-extrabold tracking-[0.06em]">ALASO</span>
+            <span className="mt-0.5 text-[8px] font-semibold tracking-[0.34em] text-accent-500">
+              HEALTH
+            </span>
           </span>
         </Link>
         <nav aria-label="Primary" className="flex items-center gap-5 text-sm font-medium">
@@ -64,7 +67,7 @@ export function SiteFooter() {
       <PanAfricanBand />
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-6 px-5 py-10 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-2.5">
-          <Image src="/brand/alaso-mark.svg" alt="" width={24} height={24} />
+          <Image src="/brand/alaso-mark-dark.svg" alt="" width={26} height={26} className="rounded-md" />
           <span className="text-sm text-muted">
             {APP_NAME} — by {BRAND_NAME}
           </span>

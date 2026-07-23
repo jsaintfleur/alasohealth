@@ -1,6 +1,6 @@
-<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Alaso">
-  
-  <g transform="translate(0 0) scale(1)">
+<svg width="960" height="280" viewBox="0 0 960 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Alaso Health">
+  <title>Alaso Health</title>
+  <g transform="translate(24 16) scale(0.242)">
     <path d="M218 850 C380 918 644 918 806 850 C800 878 790 896 778 908 C624 958 400 958 246 908 C234 896 224 878 218 850 Z" fill="#1d6f4a"/>
     <path d="M152 850 L298 850 L560 196 L462 140 Z" fill="#1e3fae"/>
     <path d="M462 140 L560 196 L540 246 L442 190 Z" fill="#142d73"/>
@@ -13,5 +13,9 @@
       <path d="M500 556 L436 688" stroke-width="42"/>
       <path d="M500 556 L564 688" stroke-width="42"/>
     </g>
+  </g>
+  <g transform="translate(280 30)">
+    <text x="0" y="120" font-family="Helvetica, Arial, sans-serif" font-size="128" font-weight="800" letter-spacing="4" fill="#ffffff">ALASO</text>
+    <text x="4" y="182" font-family="Helvetica, Arial, sans-serif" font-size="42" font-weight="600" letter-spacing="20" fill="#c22743">HEALTH</text>
   </g>
 </svg>

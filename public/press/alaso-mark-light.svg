@@ -1,8 +1,17 @@
-<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Alaso mark">
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Alaso">
   
-    <path d="M286 746C342 616 401 454 512 244" stroke="#ffffff" stroke-width="86" stroke-linecap="round" fill="none"/>
-    <path d="M738 746C682 616 623 454 512 244" stroke="#ffffff" stroke-width="86" stroke-linecap="round" fill="none"/>
-    <path d="M392 566C455 534 569 534 632 566" stroke="#ffffff" stroke-width="70" stroke-linecap="round" fill="none"/>
-  
-  <circle cx="512" cy="348" r="54" fill="#ffffff"/>
+  <g transform="translate(0 0) scale(1)">
+    <path d="M218 850 C380 918 644 918 806 850 C800 878 790 896 778 908 C624 958 400 958 246 908 C234 896 224 878 218 850 Z" fill="#1d6f4a"/>
+    <path d="M152 850 L298 850 L560 196 L462 140 Z" fill="#1e3fae"/>
+    <path d="M462 140 L560 196 L540 246 L442 190 Z" fill="#142d73"/>
+    <path d="M462 140 L560 196 L872 850 L726 850 Z" fill="#c22743"/>
+    <g stroke="#ffffff" stroke-linecap="round" fill="none">
+      <circle cx="500" cy="360" r="48" fill="#ffffff" stroke="none"/>
+      <path d="M500 438 L500 566" stroke-width="52"/>
+      <path d="M496 462 L398 374" stroke-width="38"/>
+      <path d="M504 462 L602 374" stroke-width="38"/>
+      <path d="M500 556 L436 688" stroke-width="42"/>
+      <path d="M500 556 L564 688" stroke-width="42"/>
+    </g>
+  </g>
 </svg>

@@ -58,56 +58,78 @@ export default function HomePage() {
       <JsonLd data={organizationSchema()} />
       <JsonLd data={softwareAppSchema()} />
       <main className="flex-1">
-        {/* Hero */}
-        <section className="mx-auto grid w-full max-w-5xl items-center gap-10 px-5 pt-16 pb-20 md:grid-cols-2 md:pt-24">
-          <div>
-            <p className="mb-3 inline-block rounded-full bg-brand-700/5 px-3 py-1 text-xs font-semibold tracking-wide text-brand-700 uppercase">
-              {BRAND_NAME}
-            </p>
-            <h1 className="text-4xl font-bold tracking-tight text-balance sm:text-5xl">
-              {TAGLINE}
-            </h1>
-            <p className="mt-4 max-w-md text-lg leading-relaxed text-muted">
-              {APP_NAME} is a calm, beautifully simple fitness tracker for building healthier
-              habits at home — no gym, no account, and your data never leaves your device.
-            </p>
-            <div className="mt-7 flex flex-wrap items-center gap-3">
-              <a
-                href={APP_URL}
-                className="rounded-full bg-brand-700 px-7 py-3.5 text-base font-semibold text-white transition-colors hover:bg-brand-800"
-              >
-                {`Open ${APP_NAME} — it's free`}
-              </a>
-              <a href="/features" className="px-2 py-3 text-sm font-semibold text-primary">
-                See what it does
-              </a>
+        {/* Hero — the Motion identity: navy field, editorial type, real product */}
+        <section className="bg-[#0b1226] text-white">
+          <div className="mx-auto grid w-full max-w-5xl items-center gap-10 px-5 pt-16 pb-14 md:grid-cols-2 md:pt-24">
+            <div>
+              <p className="mb-4 inline-block rounded-full border border-white/15 px-3 py-1 text-xs font-semibold tracking-[0.2em] text-brand-200 uppercase">
+                {BRAND_NAME}
+              </p>
+              <h1 className="text-4xl font-extrabold tracking-tight text-balance sm:text-6xl">
+                Move with purpose.{" "}
+                <span className="text-accent-300 sm:block">Build your legacy.</span>
+              </h1>
+              <p className="mt-5 max-w-md text-lg leading-relaxed text-brand-100">
+                {APP_NAME} helps you build healthier habits through movement, discipline,
+                and consistent progress — entirely on your device.
+              </p>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <a
+                  href={APP_URL}
+                  className="rounded-full bg-white px-7 py-3.5 text-base font-bold text-brand-800 transition-colors hover:bg-brand-100"
+                >
+                  Download {APP_NAME}
+                </a>
+                <a
+                  href="/features"
+                  className="rounded-full border border-white/25 px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
+                >
+                  See how it works
+                </a>
+              </div>
+              <p className="mt-5 flex items-center gap-1.5 text-xs text-brand-200">
+                <Lock size={13} aria-hidden />
+                Private by default. No account. No ads. No tracking.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2" aria-label="App store availability">
+                <span className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 px-3.5 py-2 text-xs text-brand-200">
+                  <span className="font-semibold text-white">App Store</span> coming soon
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 px-3.5 py-2 text-xs text-brand-200">
+                  <span className="font-semibold text-white">Google Play</span> coming soon
+                </span>
+              </div>
             </div>
-            <p className="mt-4 flex items-center gap-1.5 text-xs text-faint">
-              <Lock size={13} aria-hidden />
-              Private by default. No account. No ads. No tracking.
-            </p>
-            <div className="mt-5 flex flex-wrap gap-2" aria-label="App store availability">
-              <span className="inline-flex items-center gap-1.5 rounded-lg border border-edge bg-elevated px-3.5 py-2 text-xs text-muted">
-                <span className="font-semibold text-fg">App Store</span> coming soon
-              </span>
-              <span className="inline-flex items-center gap-1.5 rounded-lg border border-edge bg-elevated px-3.5 py-2 text-xs text-muted">
-                <span className="font-semibold text-fg">Google Play</span> coming soon
-              </span>
+            <div className="relative mx-auto w-64 sm:w-72">
+              <div className="absolute -inset-8 rounded-full bg-brand-500/20 blur-3xl" aria-hidden />
+              <div className="relative rounded-[2.4rem] border border-white/10 bg-black p-2.5 shadow-2xl">
+                <Image
+                  src="/screenshots/today.png"
+                  alt={`The ${APP_NAME} Today screen: step progress, streak, weight, and quick exercise logging`}
+                  width={1179}
+                  height={2556}
+                  priority
+                  sizes="(min-width: 640px) 17rem, 15rem"
+                  className="rounded-[1.9rem]"
+                />
+              </div>
             </div>
           </div>
-          <div className="relative mx-auto w-64 sm:w-72">
-            {/* Phone frame around the real app */}
-            <div className="rounded-[2.4rem] border border-edge bg-surface-950 p-2.5 shadow-2xl">
-              <Image
-                src="/screenshots/today.png"
-                alt={`The ${APP_NAME} Today screen: step progress, streak, weight, and quick exercise logging`}
-                width={1179}
-                height={2556}
-                priority
-                sizes="(min-width: 640px) 17rem, 15rem"
-                className="rounded-[1.9rem]"
-              />
-            </div>
+          {/* Honest numbers — product facts, not invented metrics */}
+          <div className="border-t border-white/10">
+            <dl className="mx-auto grid w-full max-w-5xl grid-cols-2 gap-6 px-5 py-8 text-center sm:grid-cols-4">
+              {[
+                ["18", "home exercises built in"],
+                ["100%", "of your data stays on-device"],
+                ["0", "ads, accounts, or trackers"],
+                ["Free", "today, as an installable app"],
+              ].map(([stat, label]) => (
+                <div key={label}>
+                  <dt className="text-2xl font-extrabold tabular-nums sm:text-3xl">{stat}</dt>
+                  <dd className="mt-1 text-xs text-brand-200">{label}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </section>
 
