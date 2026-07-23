@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import { HeritageChips, PanAfricanBand } from "@/components/HeritageBands";
+import { JsonLd, organizationSchema, softwareAppSchema } from "@/components/JsonLd";
 import { APP_NAME, APP_URL, BRAND_NAME, MISSION_STATEMENT, TAGLINE } from "@/lib/site";
 
 const FEATURES = [
@@ -54,6 +55,8 @@ export default function HomePage() {
   return (
     <>
       <SiteHeader />
+      <JsonLd data={organizationSchema()} />
+      <JsonLd data={softwareAppSchema()} />
       <main className="flex-1">
         {/* Hero */}
         <section className="mx-auto grid w-full max-w-5xl items-center gap-10 px-5 pt-16 pb-20 md:grid-cols-2 md:pt-24">
@@ -75,7 +78,7 @@ export default function HomePage() {
               >
                 {`Open ${APP_NAME} — it's free`}
               </a>
-              <a href="#features" className="px-2 py-3 text-sm font-semibold text-primary">
+              <a href="/features" className="px-2 py-3 text-sm font-semibold text-primary">
                 See what it does
               </a>
             </div>
@@ -83,6 +86,14 @@ export default function HomePage() {
               <Lock size={13} aria-hidden />
               Private by default. No account. No ads. No tracking.
             </p>
+            <div className="mt-5 flex flex-wrap gap-2" aria-label="App store availability">
+              <span className="inline-flex items-center gap-1.5 rounded-lg border border-edge bg-elevated px-3.5 py-2 text-xs text-muted">
+                <span className="font-semibold text-fg">App Store</span> coming soon
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-lg border border-edge bg-elevated px-3.5 py-2 text-xs text-muted">
+                <span className="font-semibold text-fg">Google Play</span> coming soon
+              </span>
+            </div>
           </div>
           <div className="relative mx-auto w-64 sm:w-72">
             {/* Phone frame around the real app */}
@@ -93,6 +104,7 @@ export default function HomePage() {
                 width={1179}
                 height={2556}
                 priority
+                sizes="(min-width: 640px) 17rem, 15rem"
                 className="rounded-[1.9rem]"
               />
             </div>
@@ -146,6 +158,7 @@ export default function HomePage() {
                   alt={shot.alt}
                   width={1179}
                   height={2556}
+                  sizes="12rem"
                   className="rounded-[1.6rem]"
                 />
               </div>

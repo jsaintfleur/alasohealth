@@ -1,10 +1,16 @@
 // Support — self-serve answers plus an honest note about contact channels.
 
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
-import { APP_NAME, APP_URL, SUPPORT_NOTE } from "@/lib/site";
+import { JsonLd, breadcrumbSchema, faqSchema } from "@/components/JsonLd";
+import { APP_NAME, APP_URL, APP_VERSION, SUPPORT_NOTE } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Support" };
+export const metadata: Metadata = {
+  title: "Support",
+  description: "Help with Alaso: installing, backups, step tracking, units, and data deletion.",
+  alternates: { canonical: "/support" },
+};
 
 const FAQS = [
   {
@@ -37,10 +43,13 @@ export default function SupportPage() {
   return (
     <>
       <SiteHeader />
+      <JsonLd data={faqSchema(FAQS)} />
+      <JsonLd data={breadcrumbSchema([["Support", "/support"]])} />
       <main className="mx-auto w-full max-w-2xl flex-1 px-5 py-14">
         <h1 className="text-3xl font-bold tracking-tight">Support</h1>
         <p className="mt-2 text-muted">
-          Answers to the most common questions about {APP_NAME}.
+          Answers to the most common questions about {APP_NAME} (current version{" "}
+          {APP_VERSION}).
         </p>
 
         <div className="mt-8 flex flex-col gap-3">
@@ -57,8 +66,40 @@ export default function SupportPage() {
           ))}
         </div>
 
+        <section className="mt-10">
+          <h2 className="text-xl font-bold tracking-tight">Troubleshooting</h2>
+          <ul className="mt-3 list-disc space-y-2 pl-5 text-[15px] text-muted">
+            <li>
+              <strong className="text-fg">App won&apos;t update:</strong> close all Alaso
+              tabs/windows and reopen — the new version installs on the next launch.
+            </li>
+            <li>
+              <strong className="text-fg">Charts look empty:</strong> charts fill in as you
+              log; the 7-day view needs at least one entry in the last week.
+            </li>
+            <li>
+              <strong className="text-fg">Restore rejected a file:</strong> only unmodified
+              Alaso JSON backups are accepted; nothing changes when validation fails.
+            </li>
+            <li>
+              <strong className="text-fg">Install option missing on iPhone:</strong> use
+              Safari — other iOS browsers can&apos;t add web apps to the home screen.
+            </li>
+          </ul>
+        </section>
+
+        <section className="mt-8">
+          <h2 className="text-xl font-bold tracking-tight">Known issues</h2>
+          <p className="mt-2 text-[15px] text-muted">
+            None currently open. Fixed and shipped issues are listed in the{" "}
+            <Link href="/changelog" className="font-semibold text-primary">changelog</Link>;
+            report anything new via the{" "}
+            <Link href="/contact" className="font-semibold text-primary">contact channels</Link>.
+          </p>
+        </section>
+
         <p className="mt-8 rounded-card border border-edge bg-elevated p-4 text-sm text-muted">
-          {SUPPORT_NOTE}
+          {SUPPORT_NOTE} We aim to respond within two business days.
         </p>
 
         <a

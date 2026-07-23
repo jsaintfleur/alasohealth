@@ -4,14 +4,18 @@ import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import { APP_NAME, APP_URL, BRAND_NAME } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Privacy" };
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Alaso's privacy policy: local-first storage, no analytics, no third-party sharing, and full user control.",
+  alternates: { canonical: "/privacy" },
+};
 
 export default function PrivacyPage() {
   return (
     <>
       <SiteHeader />
       <main className="mx-auto w-full max-w-2xl flex-1 px-5 py-14">
-        <h1 className="text-3xl font-bold tracking-tight">Privacy commitment</h1>
+        <h1 className="text-3xl font-bold tracking-tight">Privacy policy</h1>
         <p className="mt-2 text-sm text-faint">
           Applies to the {APP_NAME} app by {BRAND_NAME}. A formal policy document is being
           finalized with legal review; the commitments below describe how the app works
@@ -70,6 +74,41 @@ export default function PrivacyPage() {
                 Open {APP_NAME}
               </a>{" "}
               to use them.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-1.5 text-lg font-bold">Analytics and third parties</h2>
+            <p className="text-muted">
+              The app and this website run no analytics scripts, no advertising SDKs, and
+              no third-party trackers. The app is delivered over HTTPS by our hosting
+              provider (Vercel), which processes standard, short-lived server logs (such
+              as IP addresses) to serve and secure the site — as any web host does. No
+              health data is ever part of those requests.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-1.5 text-lg font-bold">Your rights</h2>
+            <p className="text-muted">
+              Because your records never leave your device, you can exercise every data
+              right directly and instantly: access and portability through Export
+              (JSON/CSV), correction by editing any entry, and erasure through{" "}
+              <a href="/data-deletion" className="font-semibold text-primary">
+                Delete all data
+              </a>
+              . No request forms, no waiting periods.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-1.5 text-lg font-bold">Contact</h2>
+            <p className="text-muted">
+              Privacy questions are welcome through the channels on our{" "}
+              <a href="/contact" className="font-semibold text-primary">
+                Contact page
+              </a>
+              .
             </p>
           </section>
 

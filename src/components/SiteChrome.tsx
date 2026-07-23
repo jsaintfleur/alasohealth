@@ -17,13 +17,13 @@ export function SiteHeader() {
           </span>
         </Link>
         <nav aria-label="Primary" className="flex items-center gap-5 text-sm font-medium">
-          <Link href="/#features" className="hidden text-muted hover:text-fg sm:block">
+          <Link href="/#features" className="hidden py-2 text-muted hover:text-fg sm:block">
             Features
           </Link>
-          <Link href="/#privacy" className="hidden text-muted hover:text-fg sm:block">
+          <Link href="/#privacy" className="hidden py-2 text-muted hover:text-fg sm:block">
             Privacy
           </Link>
-          <Link href="/support" className="hidden text-muted hover:text-fg sm:block">
+          <Link href="/support" className="hidden py-2 text-muted hover:text-fg sm:block">
             Support
           </Link>
           <a
@@ -38,6 +38,26 @@ export function SiteHeader() {
   );
 }
 
+const FOOTER_LINKS: [string, string][] = [
+  ["The app", APP_URL],
+  ["Features", "/features"],
+  ["About", "/about"],
+  ["Blog", "/blog"],
+  ["Roadmap", "/roadmap"],
+  ["Changelog", "/changelog"],
+  ["Support", "/support"],
+  ["Contact", "/contact"],
+  ["Press", "/press"],
+  ["Careers", "/careers"],
+  ["Privacy", "/privacy"],
+  ["Terms", "/terms"],
+  ["Cookie Policy", "/cookies"],
+  ["Accessibility", "/accessibility"],
+  ["Security", "/security"],
+  ["Data Deletion", "/data-deletion"],
+  ["Medical Disclaimer", "/medical-disclaimer"],
+];
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-edge">
@@ -49,19 +69,18 @@ export function SiteFooter() {
             {APP_NAME} — by {BRAND_NAME}
           </span>
         </div>
-        <nav aria-label="Footer" className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted">
-          <a href={APP_URL} className="hover:text-fg">
-            The app
-          </a>
-          <Link href="/privacy" className="hover:text-fg">
-            Privacy
-          </Link>
-          <Link href="/terms" className="hover:text-fg">
-            Terms
-          </Link>
-          <Link href="/support" className="hover:text-fg">
-            Support
-          </Link>
+        <nav aria-label="Footer" className="grid grid-cols-2 gap-x-8 gap-y-2 text-sm text-muted sm:grid-cols-3">
+          {FOOTER_LINKS.map(([label, href]) =>
+            href.startsWith("http") ? (
+              <a key={href} href={href} className="inline-block py-1 hover:text-fg">
+                {label}
+              </a>
+            ) : (
+              <Link key={href} href={href} className="inline-block py-1 hover:text-fg">
+                {label}
+              </Link>
+            )
+          )}
         </nav>
         <p className="text-xs text-faint">{COPYRIGHT}</p>
       </div>

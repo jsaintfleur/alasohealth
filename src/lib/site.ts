@@ -26,4 +26,16 @@ export const MISSION_STATEMENT =
 
 /** Support contact shown until the brand domain and mailbox exist. */
 export const SUPPORT_NOTE =
-  "A dedicated support inbox is coming with our domain launch. Until then, support is available through the app's built-in privacy and data tools.";
+  "A dedicated support inbox (support@alasohealth.com) activates with our domain launch. Until then, support is available through the app's built-in privacy and data tools and the channels on our Contact page.";
+
+/** Planned mailboxes — live once alasohealth.com is registered. */
+export const CONTACT_CHANNELS = [
+  { label: "General inquiries", email: "hello@alasohealth.com" },
+  { label: "Support", email: "support@alasohealth.com" },
+  { label: "Business & partnerships", email: "partners@alasohealth.com" },
+  { label: "Press", email: "press@alasohealth.com" },
+  { label: "Security reports", email: "security@alasohealth.com" },
+] as const;
+
+/** Current app version, mirrored from the app repo. */
+export const APP_VERSION = "1.1.0";

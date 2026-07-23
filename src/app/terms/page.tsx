@@ -4,7 +4,11 @@ import type { Metadata } from "next";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
 import { APP_NAME, BRAND_NAME } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Terms" };
+export const metadata: Metadata = {
+  title: "Terms of Use",
+  description: "Terms of use for the Alaso app by Alaso Health.",
+  alternates: { canonical: "/terms" },
+};
 
 export default function TermsPage() {
   return (
@@ -47,10 +51,39 @@ export default function TermsPage() {
           </section>
 
           <section>
+            <h2 className="mb-1.5 text-lg font-bold">Acceptable use</h2>
+            <p className="text-muted">
+              Use {APP_NAME} for personal fitness tracking. Don&apos;t attempt to disrupt
+              the service, misrepresent it as your own, or use it in ways that break the
+              law where you live.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="mb-1.5 text-lg font-bold">Intellectual property</h2>
+            <p className="text-muted">
+              The {APP_NAME} name, mark, design, and content are the property of{" "}
+              {BRAND_NAME}. Your data is yours — we claim no rights over anything you
+              record.
+            </p>
+          </section>
+
+          <section>
             <h2 className="mb-1.5 text-lg font-bold">Provided as-is</h2>
             <p className="text-muted">
               The app is provided as-is while formal terms are completed. We build
               carefully and test thoroughly, but you use the app at your own discretion.
+            </p>
+          </section>
+          <section>
+            <h2 className="mb-1.5 text-lg font-bold">Governing law and contact</h2>
+            <p className="text-muted">
+              Governing-law and jurisdiction clauses will be finalized with the complete
+              terms. Questions in the meantime are welcome through the{" "}
+              <a href="/contact" className="font-semibold text-primary">
+                contact channels
+              </a>
+              .
             </p>
           </section>
         </div>
