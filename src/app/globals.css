@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Alaso Health design tokens — shared with the Alaso app (see the app repo's
+   src/app/globals.css). Blue leads; red punctuates; warm neutrals carry.
+--------------------------------------------------------------------------- */
+@theme {
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #dce6ff;
+  --color-brand-200: #b8c9fa;
+  --color-brand-300: #8ba7f0;
+  --color-brand-400: #5f7fdc;
+  --color-brand-500: #3d5fc0;
+  --color-brand-600: #284799;
+  --color-brand-700: #142d73;
+  --color-brand-800: #10265f;
+  --color-brand-900: #0d1f4e;
+  --color-brand-950: #07122d;
+
+  --color-accent-500: #c22743;
+  --color-gold-500: #c2a04f;
+
+  --color-surface-0: #faf6eb;
+  --color-surface-50: #f4efe3;
+  --color-surface-100: #ece3d3;
+  --color-surface-200: #ddd2bd;
+  --color-surface-400: #9a907e;
+  --color-surface-500: #6f685d;
+  --color-surface-700: #34322e;
+  --color-surface-900: #191816;
+  --color-surface-950: #111110;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --radius-card: 1.25rem;
+}
+
+:root {
+  --bg: var(--color-surface-0);
+  --bg-elevated: #fffdf8;
+  --fg: #1c1f26;
+  --fg-muted: var(--color-surface-500);
+  --fg-faint: var(--color-surface-400);
+  --border: rgba(28, 31, 38, 0.1);
+  --primary: var(--color-brand-700);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-elevated: var(--bg-elevated);
+  --color-fg: var(--fg);
+  --color-muted: var(--fg-muted);
+  --color-faint: var(--fg-faint);
+  --color-edge: var(--border);
+  --color-primary: var(--primary);
+}
+
+html {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  scroll-behavior: smooth;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
