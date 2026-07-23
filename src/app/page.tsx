@@ -14,6 +14,7 @@ import {
   WifiOff,
 } from "lucide-react";
 import { SiteFooter, SiteHeader } from "@/components/SiteChrome";
+import { HeritageChips, PanAfricanBand } from "@/components/HeritageBands";
 import { APP_NAME, APP_URL, BRAND_NAME, MISSION_STATEMENT, TAGLINE } from "@/lib/site";
 
 const FEATURES = [
@@ -109,9 +110,15 @@ export default function HomePage() {
               and weight — and treats consistency as the win.
             </p>
             <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {FEATURES.map(({ icon: Icon, title, body }) => (
+              {FEATURES.map(({ icon: Icon, title, body }, i) => (
                 <div key={title} className="rounded-card border border-edge bg-bg p-5">
-                  <Icon size={22} className="text-brand-700" aria-hidden />
+                  <Icon
+                    size={22}
+                    className={
+                      ["text-brand-700", "text-green-600", "text-accent-500"][i % 3]
+                    }
+                    aria-hidden
+                  />
                   <h3 className="mt-3 font-bold">{title}</h3>
                   <p className="mt-1.5 text-sm leading-relaxed text-muted">{body}</p>
                 </div>
@@ -124,8 +131,8 @@ export default function HomePage() {
         <section className="mx-auto w-full max-w-5xl px-5 py-20">
           <h2 className="text-3xl font-bold tracking-tight">Designed to feel calm</h2>
           <p className="mt-2 max-w-xl text-muted">
-            Warm neutrals, one confident blue, and charts you can actually read — in light
-            and dark.
+            Clean white and light blue, one confident deep blue, and charts you can
+            actually read — in light and dark.
           </p>
           <div className="mt-10 grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-3">
             {[
@@ -147,7 +154,8 @@ export default function HomePage() {
         </section>
 
         {/* Privacy promise */}
-        <section id="privacy" className="border-t border-edge bg-brand-700 text-white">
+        <section id="privacy" className="bg-brand-700 text-white">
+          <PanAfricanBand />
           <div className="mx-auto w-full max-w-5xl px-5 py-20">
             <div className="max-w-2xl">
               <p className="mb-3 flex items-center gap-2 text-sm font-semibold tracking-wide text-brand-200 uppercase">
@@ -178,9 +186,17 @@ export default function HomePage() {
           <div className="grid gap-10 md:grid-cols-2">
             <div>
               <h2 className="flex items-center gap-2 text-2xl font-bold tracking-tight">
-                <HeartHandshake size={22} className="text-accent-500" aria-hidden /> Our mission
+                <HeartHandshake size={22} className="text-accent-500" aria-hidden /> Rooted and rising
               </h2>
               <p className="mt-3 leading-relaxed text-muted">{MISSION_STATEMENT}</p>
+              <p className="mt-3 leading-relaxed text-muted">
+                Our colors carry that story: the blue, red, and white of the Haitian flag,
+                alongside the red, green, and black of the Pan-African tradition —
+                resilience, community, and progress in every screen.
+              </p>
+              <div className="mt-4">
+                <HeritageChips />
+              </div>
             </div>
             <div>
               <h2 className="flex items-center gap-2 text-2xl font-bold tracking-tight">

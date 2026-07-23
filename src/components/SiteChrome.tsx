@@ -3,10 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { APP_NAME, APP_URL, BRAND_NAME, COPYRIGHT } from "@/lib/site";
+import { HaitiBand, PanAfricanBand } from "./HeritageBands";
 
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-edge bg-bg/90 backdrop-blur">
+      <HaitiBand />
       <div className="mx-auto flex h-16 w-full max-w-5xl items-center justify-between px-5">
         <Link href="/" className="flex items-center gap-2.5" aria-label={`${BRAND_NAME} home`}>
           <Image src="/brand/alaso-mark.svg" alt="" width={30} height={30} />
@@ -39,6 +41,7 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="border-t border-edge">
+      <PanAfricanBand />
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-6 px-5 py-10 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-2.5">
           <Image src="/brand/alaso-mark.svg" alt="" width={24} height={24} />

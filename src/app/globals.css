@@ -18,17 +18,24 @@
   --color-brand-950: #07122d;
 
   --color-accent-500: #c22743;
+  --color-accent-600: #a81f38;
   --color-gold-500: #c2a04f;
 
-  --color-surface-0: #faf6eb;
-  --color-surface-50: #f4efe3;
-  --color-surface-100: #ece3d3;
-  --color-surface-200: #ddd2bd;
-  --color-surface-400: #9a907e;
-  --color-surface-500: #6f685d;
-  --color-surface-700: #34322e;
-  --color-surface-900: #191816;
-  --color-surface-950: #111110;
+  /* Pan-African trio — first-class brand colors alongside Haitian blue/red */
+  --color-green-500: #2a8a5e;
+  --color-green-600: #1d6f4a;
+  --color-green-700: #16563a;
+  --color-ink: #171817;
+
+  --color-surface-0: #ffffff;
+  --color-surface-50: #f5f8ff;
+  --color-surface-100: #e9effc;
+  --color-surface-200: #c9d6ef;
+  --color-surface-400: #8d97ab;
+  --color-surface-500: #5f6980;
+  --color-surface-700: #3a4359;
+  --color-surface-900: #191c24;
+  --color-surface-950: #111318;
 
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --radius-card: 1.25rem;
@@ -36,11 +43,11 @@
 
 :root {
   --bg: var(--color-surface-0);
-  --bg-elevated: #fffdf8;
-  --fg: #1c1f26;
+  --bg-elevated: var(--color-surface-50);
+  --fg: #1a2233;
   --fg-muted: var(--color-surface-500);
   --fg-faint: var(--color-surface-400);
-  --border: rgba(28, 31, 38, 0.1);
+  --border: rgba(20, 45, 115, 0.12);
   --primary: var(--color-brand-700);
 }
 
